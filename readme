@@ -1,0 +1,95 @@
+# AI Powered Student Placement Prediction and Recommended System🎓
+
+A data analysis and machine learning project that explores factors affecting student placement outcomes and predicts whether a student will be placed based on academic and skill-based features.
+
+## 📌 Project Overview
+
+This project analyzes a dataset of college students (`placement.csv`) to understand what factors correlate with placement success (CGPA, communication skills, projects completed, IQ, internship experience, etc.), and builds a classification model to predict placement outcomes.
+
+## 📂 Dataset
+
+The dataset (`placement.csv`) contains the following columns:
+- `College_ID`
+- `CGPA`
+- `IQ`
+- `Prev_Sem_Result`
+- `Academic_Performance`
+- `Internship_Experience`
+- `Extra_Curricular_Score`
+- `Communication_Skills`
+- `Projects_Completed`
+- `Placement` (target: Yes/No)
+
+## 🔍 Exploratory Data Analysis (EDA)
+
+- Total number of placed vs. unplaced students
+- Average CGPA of placed vs. unplaced students
+- Placement distribution based on internship experience
+- Comparison of projects completed, IQ, academic performance, communication skills, and extracurricular scores between placed and unplaced students
+- Correlation heatmap between numerical features
+- Top 10 students by CGPA
+
+## 🤖 Machine Learning Model
+
+- **Preprocessing:** Label encoding of categorical columns, handling class imbalance using SMOTE
+- **Model:** Random Forest Classifier
+- **Evaluation:** Confusion matrix, classification report, accuracy score, F1 score, 5-fold cross-validation
+- **Feature Importance:** Identifies which factors most influence placement (exported to `importance.csv`)
+
+## 💡 Additional Feature
+
+A custom `suggest()` function that gives personalized improvement suggestions (e.g., improve CGPA, communication skills, projects, or aptitude) based on a student's current stats.
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+- Imbalanced-learn (SMOTE)
+
+## 🚀 How to Run
+
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
+   ```
+3. Place `placement.csv` in the project folder
+4. Open and run `placement.ipynb` in Jupyter Notebook
+
+## 📊 Results
+
+- Feature importance ranking is saved in `importance.csv`
+- Model performance is reported using F1 score and cross-validation
+
+## 📈 Power BI Dashboard
+
+An interactive Power BI dashboard has been built on top of this dataset to visualize placement insights, including:
+
+- Overall placement rate (Placed vs. Not Placed)
+- CGPA, Communication Skills, and Projects Completed comparison across placement status
+- Internship experience impact on placement
+- Filters/slicers for region, department, or other categorical fields (update as per your dashboard)
+- Feature importance visualization
+
+**File:** `placement_dashboard.pbix`
+
+### How to view
+1. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free)
+2. Open `placement_dashboard.pbix`
+3. Use the slicers/filters on the report page to explore the data interactively
+
+
+## 📁 Project Structure
+
+```
+├── placement.ipynb            # Main notebook with EDA and model
+├── placement.csv               # Dataset
+├── importance.csv              # Feature importance output
+├── placement_dashboard.pbix    # Power BI dashboard
+└── README.md                    # Project documentation
+```
+
+## ✍️ Author
+Mamta Rani
